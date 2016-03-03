@@ -23,7 +23,7 @@ class GithubRepoCell: UITableViewCell {
     var repo: GithubRepo! {
         didSet {
             titleLabel.text = repo.name
-            authorLabel.text = "by \(repo.ownerHandle)"
+            authorLabel.text = "by \(repo.ownerHandle!)"
             descriptionLabel.text = repo.repoDescription
             avatarImageView.setImageWithURL(NSURL(string: repo.ownerAvatarURL!)!)
             starsLabel.text = String(repo.stars!)
